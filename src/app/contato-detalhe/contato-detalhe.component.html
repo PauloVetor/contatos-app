@@ -1,0 +1,33 @@
+<div class="example-container mat-elevation-z8">
+  <div class="example-loading-shade"
+       *ngIf="isLoadingResults">
+    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+  </div>
+  <div class="button-row">
+    <button mat-flat-button color="accent" [routerLink]="['/contatos']"><mat-icon>list</mat-icon> Voltar</button>
+  </div>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title><h2>{{contato.nome_contato}}</h2></mat-card-title>
+      <mat-card-subtitle>{{contato.cel_contato}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <dl>
+        <dt>Preço:</dt>
+        <dd>{{contato.email_contato}}</dd>
+        <dt>Nascimento:</dt>
+        <dd>{{contato.dt_nascimento | date}}</dd>
+        <dt>endereço:</dt>
+        <dd>{{contato.endereco}}</dd>
+        <dt>Telefone:</dt>
+        <dd>{{contato.fone_contato}}</dd>
+        <dt>Telefone de Contato:</dt>
+        <dd>{{contato.fone2_contato}}</dd>
+      </dl>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="primary" class="teste" [routerLink]="['/contato-editar', contato._id]"><mat-icon>edit</mat-icon> Editar</button>
+      <button mat-flat-button color="warn" (click)="deleteContato(contato._id)"><mat-icon>delete</mat-icon> Excluir</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

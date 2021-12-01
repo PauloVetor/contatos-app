@@ -1,0 +1,32 @@
+<div>
+  <h3>Adicionar Novo Contato</h3>
+</div>
+<form class="example-container" [formGroup]="contactForm" (ngSubmit)="addcontato(contactForm.value)">
+  <mat-form-field>
+    <input matInput name="nome_contato" placeholder="Nome do Contato:" formControlName="nome_contato">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea  matInput name="cel_contato" placeholder="Celular:" formControlName="cel_contato"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput name="email_contato" placeholder="E-mail:" formControlName="email_contato">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput name="dt_nascimento" placeholder="Data de nascimento:" formControlName="dt_nascimento">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput name="endereco" placeholder="Endereço:" formControlName="endereco">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput name="fone_contato" placeholder="Telefone:" formControlName="fone_contato">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput name="fone2_contato" placeholder="Telefone de Contato:" formControlName="fone2_contato">
+  </mat-form-field>
+
+
+
+
+
+  <button type="submit" [disabled]="!contactForm.valid" mat-button color="primary" >Adicionar</button>
+</form>

@@ -1,0 +1,28 @@
+<div>
+  <h3>Editar Contato</h3>
+</div>
+<form class="example-container" [formGroup]="contactForm" (ngSubmit)="updateContato(contactForm.value)">
+  <mat-form-field>
+    <input matInput name="nome_contato" placeholder="Nome do contato:" formControlName="nome_contato">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea  matInput name="cel_contato" placeholder="Celular:" formControlName="cel_contato"></textarea>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput name="email_contato" placeholder="E-mail:" formControlName="email_contato">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput name="dt_nascimento" placeholder="Data de nascimento:" formControlName="dt_nascimento">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput name="endereco" placeholder="Endereço:" formControlName="endereco">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput name="fone_contato" placeholder="Telefone:" formControlName="fone_contato">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput name="fone2_contato" placeholder="Telefone de Contato:" formControlName="fone2_contato">
+  </mat-form-field>
+
+  <button type="submit" [disabled]="!productForm.valid" mat-button color="primary" >Editar</button>
+</form>
